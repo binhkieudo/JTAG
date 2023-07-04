@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jun 23 02:24:24 2023
+# Process ID: 34760
+# Current directory: /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog
+# Command line: vivado
+# Log file: /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/vivado.log
+# Journal file: /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/vivado.jou
+# Running On: binhkieudo-asus, OS: Linux, CPU Frequency: 1400.000 MHz, CPU Physical cores: 16, Host memory: 33036 MB
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/project_1 -part xc7a35ticsg324-1L
+set_property board_part digilentinc.com:arty-a7-35:part0:1.1 [current_project]
+add_files -norecurse {/home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_crc32_d1.v /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_top.v /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_cpu.v /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_wb_defines.v /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_cpu_defines.v /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_defines.v /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_register.v /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_cpu_registers.v /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/dbg_wb.v}
+import_files -force -norecurse
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1

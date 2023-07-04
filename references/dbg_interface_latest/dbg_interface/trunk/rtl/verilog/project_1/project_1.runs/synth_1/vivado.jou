@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jun 23 02:25:47 2023
+# Process ID: 35113
+# Current directory: /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/project_1/project_1.runs/synth_1
+# Command line: vivado -log dbg_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dbg_top.tcl
+# Log file: /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/project_1/project_1.runs/synth_1/dbg_top.vds
+# Journal file: /home/binhkieudo/Workspace/Opencores/dbg_interface_latest/dbg_interface/trunk/rtl/verilog/project_1/project_1.runs/synth_1/vivado.jou
+# Running On: binhkieudo-asus, OS: Linux, CPU Frequency: 2843.471 MHz, CPU Physical cores: 16, Host memory: 33036 MB
+#-----------------------------------------------------------
+source dbg_top.tcl -notrace

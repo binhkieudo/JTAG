@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1687454744">
+  <File Type="VDS-TIMING-PB" Name="dbg_top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="dbg_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-RDS" Name="dbg_top.vds"/>
+  <File Type="REPORTS-TCL" Name="dbg_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="dbg_top.tcl"/>
+  <File Type="RDS-DCP" Name="dbg_top.dcp"/>
+  <File Type="RDS-PROPCONSTRS" Name="dbg_top_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="dbg_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="dbg_top_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_cpu_defines.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_cpu_defines.v"/>
+        <Attr Name="ImportTime" Val="1081173174"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_cpu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_cpu.v"/>
+        <Attr Name="ImportTime" Val="1081433710"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_cpu_registers.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_cpu_registers.v"/>
+        <Attr Name="ImportTime" Val="1080505688"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_crc32_d1.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_crc32_d1.v"/>
+        <Attr Name="ImportTime" Val="1080505688"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_wb_defines.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_wb_defines.v"/>
+        <Attr Name="ImportTime" Val="1080743653"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_wb.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_wb.v"/>
+        <Attr Name="ImportTime" Val="1080840082"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_defines.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_defines.v"/>
+        <Attr Name="ImportTime" Val="1080820619"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_top.v"/>
+        <Attr Name="ImportTime" Val="1080820619"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/verilog/dbg_register.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dbg_register.v"/>
+        <Attr Name="ImportTime" Val="1080505688"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="dbg_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

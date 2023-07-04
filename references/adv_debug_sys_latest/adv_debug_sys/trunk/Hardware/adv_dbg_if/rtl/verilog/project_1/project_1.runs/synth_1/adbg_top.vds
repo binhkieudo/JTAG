@@ -1,0 +1,471 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jun 23 02:19:33 2023
+# Process ID: 34035
+# Current directory: /home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.runs/synth_1
+# Command line: vivado -log adbg_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adbg_top.tcl
+# Log file: /home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.runs/synth_1/adbg_top.vds
+# Journal file: /home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.runs/synth_1/vivado.jou
+# Running On: binhkieudo-asus, OS: Linux, CPU Frequency: 1400.000 MHz, CPU Physical cores: 16, Host memory: 33036 MB
+#-----------------------------------------------------------
+source adbg_top.tcl -notrace
+Command: synth_design -top adbg_top -part xc7a35ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34055
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2422.695 ; gain = 381.738 ; free physical = 13306 ; free virtual = 23924
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1854.879; parent = 1645.446; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3453.793; parent = 2425.668; children = 1028.125
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'adbg_top' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_top.v:45]
+INFO: [Synth 8-6157] synthesizing module 'adbg_wb_module' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_wb_module.v:64]
+INFO: [Synth 8-6157] synthesizing module 'adbg_wb_biu' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_wb_biu.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_wb_biu' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_wb_biu.v:67]
+INFO: [Synth 8-6157] synthesizing module 'adbg_crc32' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_crc32.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_crc32' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_crc32.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_wb_module' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_wb_module.v:64]
+INFO: [Synth 8-6157] synthesizing module 'adbg_or1k_module' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_or1k_module.v:69]
+INFO: [Synth 8-6157] synthesizing module 'adbg_or1k_status_reg' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_or1k_status_reg.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_or1k_status_reg' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_or1k_status_reg.v:68]
+INFO: [Synth 8-6157] synthesizing module 'adbg_or1k_biu' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_or1k_biu.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_or1k_biu' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_or1k_biu.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_or1k_module' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_or1k_module.v:69]
+INFO: [Synth 8-6157] synthesizing module 'adbg_jsp_module' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_jsp_module.v:44]
+INFO: [Synth 8-6157] synthesizing module 'adbg_jsp_biu' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_jsp_biu.v:52]
+INFO: [Synth 8-6157] synthesizing module 'syncflop' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/syncflop.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'syncflop' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/syncflop.v:62]
+INFO: [Synth 8-6157] synthesizing module 'syncreg' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/syncreg.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'syncreg' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/syncreg.v:68]
+INFO: [Synth 8-6157] synthesizing module 'bytefifo' [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/bytefifo.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'bytefifo' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/bytefifo.v:73]
+INFO: [Synth 8-226] default block is never used [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_jsp_biu.v:288]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_jsp_biu.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_jsp_biu' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_jsp_biu.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_jsp_module' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_jsp_module.v:44]
+INFO: [Synth 8-226] default block is never used [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_top.v:439]
+INFO: [Synth 8-6155] done synthesizing module 'adbg_top' (0#1) [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_top.v:45]
+WARNING: [Synth 8-6014] Unused sequential element internal_register_select_reg was removed.  [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_wb_module.v:269]
+WARNING: [Synth 8-6014] Unused sequential element internal_register_select_reg was removed.  [/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.srcs/sources_1/imports/verilog/adbg_or1k_module.v:231]
+WARNING: [Synth 8-7129] Port wb_adr_i[31] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[30] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[29] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[28] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[27] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[26] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[25] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[24] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[23] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[22] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[21] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[20] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[19] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[18] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[17] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[16] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[15] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[14] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[13] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[12] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[11] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[10] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[9] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[8] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[7] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[6] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[5] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[4] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_adr_i[3] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[23] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[22] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[21] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[20] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[15] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[14] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[13] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[12] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[11] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[8] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[6] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[5] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[4] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[3] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[2] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[1] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_dat_i[0] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_cab_i in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_cti_i[2] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_cti_i[1] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_cti_i[0] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_bte_i[1] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wb_bte_i[0] in module adbg_jsp_biu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[45] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[44] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[43] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[42] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[41] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[40] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[39] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[38] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[37] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[36] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[35] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[34] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[33] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[32] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[31] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[30] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[29] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[28] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[27] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[26] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[25] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[24] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[23] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[22] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[21] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[20] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[19] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[18] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[17] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[16] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[15] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[14] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[13] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[12] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[11] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[10] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[9] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[8] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[7] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[6] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[5] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[4] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[3] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[2] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[1] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_register_i[0] in module adbg_jsp_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pause_dr_i in module adbg_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2507.633 ; gain = 466.676 ; free physical = 13384 ; free virtual = 24003
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1854.879; parent = 1645.446; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3535.762; parent = 2507.637; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2519.508 ; gain = 478.551 ; free physical = 13362 ; free virtual = 23992
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1854.879; parent = 1645.446; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3547.637; parent = 2519.512; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticsg324-1L
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2527.512 ; gain = 486.555 ; free physical = 13356 ; free virtual = 23987
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1854.879; parent = 1645.446; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3555.641; parent = 2527.516; children = 1028.125
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'module_state_reg' in module 'adbg_wb_module'
+INFO: [Synth 8-802] inferred FSM for state register 'module_state_reg' in module 'adbg_or1k_module'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_fsm_state_reg' in module 'adbg_jsp_biu'
+INFO: [Synth 8-802] inferred FSM for state register 'wr_module_state_reg' in module 'adbg_jsp_module'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_module_state_reg' in module 'adbg_jsp_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                      00000000001 |                             0000
+                 iSTATE4 |                      00000000010 |                             0001
+                 iSTATE1 |                      00000000100 |                             0010
+                  iSTATE |                      00000001000 |                             0011
+                 iSTATE0 |                      00000010000 |                             0100
+                 iSTATE7 |                      00000100000 |                             1001
+                iSTATE10 |                      00001000000 |                             0101
+                 iSTATE9 |                      00010000000 |                             0110
+                 iSTATE6 |                      00100000000 |                             0111
+                 iSTATE3 |                      01000000000 |                             1010
+                 iSTATE2 |                      10000000000 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'module_state_reg' using encoding 'one-hot' in module 'adbg_wb_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                      00000000001 |                             0000
+                 iSTATE4 |                      00000000010 |                             0001
+                 iSTATE1 |                      00000000100 |                             0010
+                  iSTATE |                      00000001000 |                             0011
+                 iSTATE0 |                      00000010000 |                             0100
+                 iSTATE7 |                      00000100000 |                             1001
+                iSTATE10 |                      00001000000 |                             0101
+                 iSTATE9 |                      00010000000 |                             0110
+                 iSTATE6 |                      00100000000 |                             0111
+                 iSTATE3 |                      01000000000 |                             1010
+                 iSTATE2 |                      10000000000 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'module_state_reg' using encoding 'one-hot' in module 'adbg_or1k_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                             0001 |                               00
+                 iSTATE2 |                             0010 |                               10
+                  iSTATE |                             0100 |                               11
+                 iSTATE0 |                             1000 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_fsm_state_reg' using encoding 'one-hot' in module 'adbg_jsp_biu'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                               00 |                              000
+                  iSTATE |                               01 |                              001
+                 iSTATE2 |                               10 |                              010
+                 iSTATE1 |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_module_state_reg' using encoding 'sequential' in module 'adbg_jsp_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                              000
+                  iSTATE |                               01 |                              001
+                 iSTATE0 |                               10 |                              010
+                 iSTATE2 |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_module_state_reg' using encoding 'sequential' in module 'adbg_jsp_module'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2553.332 ; gain = 512.375 ; free physical = 13275 ; free virtual = 23907
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1881.869; parent = 1672.627; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3581.461; parent = 2553.336; children = 1028.125
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 9     
++---XORs : 
+	   2 Input      1 Bit         XORs := 34    
++---Registers : 
+	               53 Bit    Registers := 1     
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 9     
+	                8 Bit    Registers := 19    
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 15    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 64    
++---Muxes : 
+	   2 Input   33 Bit        Muxes := 8     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 7     
+	  11 Input   11 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 38    
+	   9 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 3     
+	   7 Input    6 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 41    
+	   3 Input    4 Bit        Muxes := 18    
+	   4 Input    4 Bit        Muxes := 10    
+	  11 Input    4 Bit        Muxes := 9     
+	   2 Input    3 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 36    
+	   7 Input    3 Bit        Muxes := 1     
+	   9 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 29    
+	   8 Input    2 Bit        Muxes := 1     
+	  11 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 5     
+	   3 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 51    
+	  11 Input    1 Bit        Muxes := 30    
+	   4 Input    1 Bit        Muxes := 21    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port data_register_i[45] in module adbg_jsp_module is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13125 ; free virtual = 23727
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13125 ; free virtual = 23727
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13123 ; free virtual = 23725
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13121 ; free virtual = 23723
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13121 ; free virtual = 23723
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13121 ; free virtual = 23723
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13121 ; free virtual = 23723
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13121 ; free virtual = 23723
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13121 ; free virtual = 23723
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |    30|
+|3     |LUT1   |    10|
+|4     |LUT2   |    81|
+|5     |LUT3   |   172|
+|6     |LUT4   |    80|
+|7     |LUT5   |   145|
+|8     |LUT6   |   233|
+|9     |MUXF7  |     8|
+|10    |FDCE   |   742|
+|11    |FDPE   |    71|
+|12    |FDRE   |     6|
+|13    |IBUF   |   103|
+|14    |OBUF   |   181|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------+---------------------+------+
+|      |Instance                 |Module               |Cells |
++------+-------------------------+---------------------+------+
+|1     |top                      |                     |  1865|
+|2     |  i_dbg_cpu_or1k         |adbg_or1k_module     |   494|
+|3     |    or1k_biu_i           |adbg_or1k_biu        |   212|
+|4     |    or1k_crc_i           |adbg_crc32_7         |    66|
+|5     |    or1k_statusreg_i     |adbg_or1k_status_reg |    15|
+|6     |  i_dbg_jsp              |adbg_jsp_module      |   411|
+|7     |    jsp_biu_i            |adbg_jsp_biu         |   347|
+|8     |      bytesavail_syncreg |syncreg              |    32|
+|9     |        ack_sff          |syncflop_5           |     8|
+|10    |        strobe_sff       |syncflop_6           |     4|
+|11    |      freespace_syncreg  |syncreg_0            |    30|
+|12    |        ack_sff          |syncflop_3           |     6|
+|13    |        strobe_sff       |syncflop_4           |     4|
+|14    |      rd_fifo            |bytefifo             |   107|
+|15    |      ren_sff            |syncflop             |     7|
+|16    |      wen_sff            |syncflop_1           |     6|
+|17    |      wr_fifo            |bytefifo_2           |   112|
+|18    |  i_dbg_wb               |adbg_wb_module       |   615|
+|19    |    wb_biu_i             |adbg_wb_biu          |   299|
+|20    |    wb_crc_i             |adbg_crc32           |    79|
++------+-------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13121 ; free virtual = 23723
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2104.060; parent = 1894.928; children = 209.433
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3741.953; parent = 2713.828; children = 1028.125
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 201 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.824 ; gain = 672.867 ; free physical = 13126 ; free virtual = 23728
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2713.832 ; gain = 672.867 ; free physical = 13126 ; free virtual = 23728
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2713.832 ; gain = 0.000 ; free physical = 13215 ; free virtual = 23817
+INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.660 ; gain = 0.000 ; free physical = 13144 ; free virtual = 23747
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: bb055d4
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2813.660 ; gain = 796.516 ; free physical = 13355 ; free virtual = 23959
+INFO: [Common 17-1381] The checkpoint '/home/binhkieudo/Workspace/Opencores/adv_debug_sys_latest/adv_debug_sys/trunk/Hardware/adv_dbg_if/rtl/verilog/project_1/project_1.runs/synth_1/adbg_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file adbg_top_utilization_synth.rpt -pb adbg_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 23 02:20:00 2023...

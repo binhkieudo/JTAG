@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1688485701" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/OutputCell.dcp">
+  <File Type="VDS-TIMING-PB" Name="OutputCell_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="OutputCell_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="OutputCell.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="OutputCell_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="OutputCell_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="OutputCell_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="OutputCell.vds"/>
+  <File Type="REPORTS-TCL" Name="OutputCell_reports.tcl"/>
+  <File Type="PA-TCL" Name="OutputCell.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/source/OutputCell.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../source/OutputCell.v"/>
+        <Attr Name="ImportTime" Val="1688484879"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="OutputCell"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/OutputCell.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
