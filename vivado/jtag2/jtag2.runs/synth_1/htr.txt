@@ -6,4 +6,4 @@
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log debug_dtm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source debug_dtm.tcl
+vivado -log debug_dm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source debug_dm.tcl

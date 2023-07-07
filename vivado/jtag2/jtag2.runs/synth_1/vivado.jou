@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Jul  6 20:12:11 2023
-# Process ID: 98684
+# Start of session at: Fri Jul  7 12:24:43 2023
+# Process ID: 1271392
 # Current directory: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.runs/synth_1
-# Command line: vivado -log debug_dtm.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source debug_dtm.tcl
-# Log file: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.runs/synth_1/debug_dtm.vds
+# Command line: vivado -log debug_dm.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source debug_dm.tcl
+# Log file: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.runs/synth_1/debug_dm.vds
 # Journal file: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.runs/synth_1/vivado.jou
-# Running On: binhkieudo-asus, OS: Linux, CPU Frequency: 1400.000 MHz, CPU Physical cores: 16, Host memory: 33036 MB
+# Running On: binhkieudo, OS: Linux, CPU Frequency: 3300.000 MHz, CPU Physical cores: 10, Host memory: 134739 MB
 #-----------------------------------------------------------
-source debug_dtm.tcl -notrace
+source debug_dm.tcl -notrace

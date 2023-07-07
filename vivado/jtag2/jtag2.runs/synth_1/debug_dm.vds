@@ -1,13 +1,15 @@
-
-*** Running vivado
-    with args -log debug_dm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source debug_dm.tcl
-
-
-****** Vivado v2022.2 (64-bit)
-  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
-  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jul  7 12:24:43 2023
+# Process ID: 1271392
+# Current directory: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.runs/synth_1
+# Command line: vivado -log debug_dm.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source debug_dm.tcl
+# Log file: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.runs/synth_1/debug_dm.vds
+# Journal file: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.runs/synth_1/vivado.jou
+# Running On: binhkieudo, OS: Linux, CPU Frequency: 3300.000 MHz, CPU Physical cores: 10, Host memory: 134739 MB
+#-----------------------------------------------------------
 source debug_dm.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.srcs/utils_1/imports/synth_1/debug_dtm.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.srcs/utils_1/imports/synth_1/debug_dtm.dcp for incremental synthesis

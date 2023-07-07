@@ -31,18 +31,26 @@ module debug_dm(
     input  [5:0]  i_dmi_req_address,
     input  [1:0]  i_dmi_req_op,
     input  [31:0] i_dmi_req_data,
-    output        o_dmi_rsp_valid,
+    output reg    o_dmi_rsp_valid,
     input         i_dmi_rsp_ready,
-    output [31:0] o_dmi_rsp_data,
+    output reg [31:0] o_dmi_rsp_data,
     output [1:0]  o_dmi_rsp_op,
-    // Wishbone bus access
-    output [31:0] o_bus_adr,
-    output [31:0] o_bus_dat,
-    output [3:0]  o_bus_sel,
-    output 		  o_bus_we ,
-    output        o_bus_cyc,
-    input  [31:0] i_bus_rdt,
-    input         i_bus_ack,
+    // Wishbone bus master access
+//    output [31:0] o_mbus_adr,
+//    output [31:0] o_mbus_dat,
+//    output [3:0]  o_mbus_sel,
+//    output 		  o_mbus_we ,
+//    output        o_mbus_cyc,
+//    input  [31:0] i_mbus_rdt,
+//    input         i_mbus_ack,
+    // Wishbone bus slave interface
+    input  [31:0] i_sbus_adr,
+    input  [31:0] i_sbus_dat,
+    input  [3:0]  i_subs_sel,
+    input         i_sbus_we,
+    input         i_sbus_cyc,
+    output reg [31:0] o_sbus_rdt,
+    output reg        o_sbus_ack,
     // CPU control
     output o_cpu_ndmrstn,
     output o_cpu_req_halt    
@@ -76,6 +84,13 @@ module debug_dm(
     // DMI access
     wire dmi_wren;
     wire dmi_rden;
+    
+    // Output registers
+//    reg         o_dmi_rsp_valid;
+//    reg [31:0]  o_dmi_rsp_data;
+    
+//    reg [31:0]  o_sbus_rdt;
+//    reg         o_sbus_ack;
     
     // Debug module DMI registers
     reg         dm_reg_dmcontrol_ndmreset;
@@ -137,7 +152,7 @@ module debug_dm(
     reg [255:0] dci_progbuf;
     wire        dci_data_we;
     wire [31:0] dci_wdata;
-    reg [31:0]  dci_rdata;
+    wire [31:0] dci_rdata;
     
     // Global access control
     wire       acc_en;
@@ -401,13 +416,13 @@ module debug_dm(
                 dm_reg_progbuf1 <= i_dmi_req_data;                              
    end
             
-   // ===== Direct control
+   // ===== Direct control ====================================
    // Abtract data register
    assign dci_data_we = dmi_wren && (i_dmi_req_address == DMI_ADDR_DATA0) && (!dm_ctrl_busy);
    assign dci_wdata   = i_dmi_req_data;   
    
    // CPU halt/resume request
-  assign o_cpu_halt_req = dm_reg_halt_req && dm_reg_dmcontrol_dmactive; // single-shot
+  assign o_cpu_req_halt = dm_reg_halt_req && dm_reg_dmcontrol_dmactive; // single-shot
   assign dci_resume_req = dm_ctrl_hart_resume_req; // active until explicitly cleared   
    
   // SOC reset
@@ -422,5 +437,185 @@ module debug_dm(
   // DMI status
   assign o_dmi_rsp_op    = 2'b00; // operation success
   assign o_dmi_req_ready = 1'b1; // always ready for new read/write
+  
+  // ===== Debug Module Interface ==========================ndmodule
+  // Read access
+  always @(posedge i_clk)
+  begin
+    o_dmi_rsp_valid <= i_dmi_req_valid;
+    
+    case (i_dmi_req_address)
+        DMI_ADDR_DMSTATUS   : 
+        begin
+            o_dmi_rsp_data[31:23]   <= 9'd0;
+            o_dmi_rsp_data[22]      <= 1'b1;
+            o_dmi_rsp_data[21:20]   <= 2'b00;
+            o_dmi_rsp_data[19]      <= dm_ctrl_hart_reset;
+            o_dmi_rsp_data[18]      <= dm_ctrl_hart_reset;
+            o_dmi_rsp_data[17]      <= dm_ctrl_hart_resume_ack;
+            o_dmi_rsp_data[16]      <= dm_ctrl_hart_resume_ack;
+            o_dmi_rsp_data[15]      <= 1'b0;
+            o_dmi_rsp_data[14]      <= 1'b0;
+            o_dmi_rsp_data[13]      <= dm_reg_dmcontrol_ndmreset;
+            o_dmi_rsp_data[12]      <= dm_reg_dmcontrol_ndmreset;
+            o_dmi_rsp_data[11]      <= !dm_ctrl_hart_halted;
+            o_dmi_rsp_data[10]      <= !dm_ctrl_hart_halted;
+            o_dmi_rsp_data[9]       <= dm_ctrl_hart_halted;
+            o_dmi_rsp_data[8]       <= dm_ctrl_hart_halted;
+            o_dmi_rsp_data[7]       <= 1'b1;
+            o_dmi_rsp_data[6]       <= 1'b0;
+            o_dmi_rsp_data[5]       <= 1'b0;
+            o_dmi_rsp_data[4]       <= 1'b0;
+            o_dmi_rsp_data[3:0]     <= 4'b0011;
+        end
+        DMI_ADDR_DMCONTROL  : 
+        begin
+            o_dmi_rsp_data[31]    <= 1'b0;
+            o_dmi_rsp_data[30]    <= 1'b0;
+            o_dmi_rsp_data[29]    <= 1'b0;
+            o_dmi_rsp_data[28]    <= 1'b0;
+            o_dmi_rsp_data[27]    <= 1'b0;
+            o_dmi_rsp_data[26]    <= 1'b0;
+            o_dmi_rsp_data[25:16] <= 10'd0;
+            o_dmi_rsp_data[15:6]  <= 10'd0;
+            o_dmi_rsp_data[5:4]   <= 2'b00;
+            o_dmi_rsp_data[3]     <= 1'b0;
+            o_dmi_rsp_data[2]     <= 1'b0;
+            o_dmi_rsp_data[1]     <= dm_reg_dmcontrol_ndmreset;
+            o_dmi_rsp_data[0]     <= dm_reg_dmcontrol_dmactive;
+        end
+        DMI_ADDR_HARTINFO   :
+        begin
+            o_dmi_rsp_data[31:24] <= 8'd0;
+            o_dmi_rsp_data[23:20] <= DM_NSCRATCH;
+            o_dmi_rsp_data[19:17] <= 3'b000;
+            o_dmi_rsp_data[16]    <= DM_DATAACCESS;
+            o_dmi_rsp_data[15:12] <= DM_DATASIZE;
+            o_dmi_rsp_data[11:0]  <= DM_DATAADDR; 
+        end
+        DMI_ADDR_ABSTRACTS  :
+        begin
+            o_dmi_rsp_data[31:24] <= 8'd0;
+            o_dmi_rsp_data[28:24] <= 5'b00010;
+            o_dmi_rsp_data[12]    <= dm_ctrl_busy;
+            o_dmi_rsp_data[11]    <= 1'b1;
+            o_dmi_rsp_data[10:8]  <= dm_ctrl_cmderr;
+            o_dmi_rsp_data[7:4]   <= 4'b0000;
+            o_dmi_rsp_data[3:0]   <= 4'b0001;
+        end
+        DMI_ADDR_ABSRACTAUTO:
+        begin
+            o_dmi_rsp_data[0] <= dm_reg_abstractauto_autoexecdata;
+            o_dmi_rsp_data[15:1] <= 15'd0;
+            o_dmi_rsp_data[16] <= dm_reg_abstractauto_autoexecprogbuf[0];
+            o_dmi_rsp_data[17] <= dm_reg_abstractauto_autoexecprogbuf[1];
+            o_dmi_rsp_data[31:18] <= 14'd0;
+        end
+        DMI_ADDR_DATA0:
+        begin
+            o_dmi_rsp_data <= dci_rdata;
+        end
+        default: o_dmi_rsp_data <= 32'd0;
+    endcase
+    
+    // invalid read access while command is executing
+    dm_reg_rd_acc_err <= dmi_rden && dm_ctrl_busy &&
+                        ((i_dmi_req_address == DMI_ADDR_DATA0)    || 
+                         (i_dmi_req_address == DMI_ADDR_PROGBUF0) || 
+                         (i_dmi_req_address == DMI_ADDR_PROGBUF1)); 
+                         
+    // auto execution trigger
+    dm_reg_autoexec_rd <= dmi_rden &&  
+                          (((i_dmi_req_address == DMI_ADDR_DATA0)    && dm_reg_abstractauto_autoexecdata)       ||
+                           ((i_dmi_req_address == DMI_ADDR_PROGBUF0) && dm_reg_abstractauto_autoexecprogbuf[0]) ||
+                           ((i_dmi_req_address == DMI_ADDR_PROGBUF1) && dm_reg_abstractauto_autoexecprogbuf[1]));  
+  end
+  
+  
+  //======== CPU Bus Interface ========================================
+  // Access control
+  assign acc_en = i_sbus_adr[HI_ABB:LO_ABB] == DM_BASE[HI_ABB:LO_ABB];
+  assign rden   = acc_en && i_cpu_debug && i_sbus_cyc && !i_sbus_we;
+  assign wren   = acc_en && i_cpu_debug && i_sbus_cyc && i_sbus_we;
+  assign maddr  = i_sbus_adr[LO_ABB-1 -: 2];
+    
+  // Write access
+  always @(posedge i_clk)
+    if (!i_rstn) begin
+        data_buf            <= 32'd0;
+        dci_halt_ack        <= 1'b0;
+        dci_resume_ack      <= 1'b0;
+        dci_execute_ack     <= 1'b0;
+        dci_exception_ack   <= 1'b0;       
+    end
+    else begin
+        if (dci_data_we) // DM write acccess
+            data_buf <= dci_wdata;
+        else if (wren && (maddr == 2'b10))
+            data_buf <= i_sbus_dat;
+            
+        dci_halt_ack        <= i_subs_sel[0] == 1'b1;
+        dci_resume_ack      <= i_subs_sel[1] == 1'b1;
+        dci_execute_ack     <= i_subs_sel[2] == 1'b1;
+        dci_exception_ack   <= i_subs_sel[3] == 1'b1;       
+    end
+  
+  // DM data buffer read access
+  assign dci_rdata = data_buf;
+  
+  // ROM
+  wire [3:0]  rom_addr;
+  reg  [31:0] rom_rdata;
+  
+  always @(*)
+    case (rom_addr)
+        0: rom_rdata = 32'h8c0001a3;  // sb x0, -1853(x0)
+        1: rom_rdata = 32'h00100073;  // ebreak
+        2: rom_rdata = 32'h7b241073;  // csrrw x0, dscratch0, x8 
+        3: rom_rdata = 32'h8c000023;  // sb x0, -1856(x0)
+        4: rom_rdata = 32'h8c204403;  // lbu x8, -1854(x0)
+        5: rom_rdata = 32'h00041c63;  // bne x8, x0, 24
+        6: rom_rdata = 32'h8c104403;  // lbu x8, -1855(x0)
+        7: rom_rdata = 32'hfe0408e3;  // beq x8, x0, -16
+        8: rom_rdata = 32'h8c8000a3;  // sb x8, -1855(x0)
+        9: rom_rdata = 32'h7b202473;  // csrrs x8, dscratch0, x0
+        10: rom_rdata = 32'h7b200073; //
+        11: rom_rdata = 32'h8c000123; // sb x0, -1854(x0)
+        12: rom_rdata = 32'h7b202473; // csrrs x8, dscratch0, x0
+        13: rom_rdata = 32'h0000100f; // fence.i
+        14: rom_rdata = 32'h84000067; // jalr x0, x0, -1984
+        15: rom_rdata = 32'h00000073; // ecall
+        default: rom_rdata = 32'd0;   
+    endcase
+  
+  assign rom_addr = i_sbus_adr[5:2];
+  
+  // Read access
+  always @(posedge i_clk)
+  begin
+    o_sbus_ack <= rden || wren;
+    
+    if (rden)
+        case (maddr)
+            2'b00: o_sbus_rdt <= rom_rdata; 
+            2'b01:
+                case (i_sbus_adr[3:2])
+                    2'b00: o_sbus_rdt <= cpu_progbuf0;  
+                    2'b01: o_sbus_rdt <= cpu_progbuf1; 
+                    2'b10: o_sbus_rdt <= cpu_progbuf2;  
+                    2'b11: o_sbus_rdt <= cpu_progbuf3; 
+                    default: o_sbus_rdt <= cpu_progbuf0;
+                endcase
+            2'b10: o_sbus_rdt <= data_buf;
+            2'b11: begin
+                o_sbus_rdt[7:0] <= 8'd0;
+                o_sbus_rdt[8] <= dci_resume_req;
+                o_sbus_rdt[15:9] <= 7'd0;
+                o_sbus_rdt[16] <= dci_execute_req;
+                o_sbus_rdt[31:17] <= 15'd0;   
+            end
+            default: o_sbus_rdt <= 32'd0;
+        endcase  
+  end
   
 endmodule
