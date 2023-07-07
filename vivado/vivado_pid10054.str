@@ -1,0 +1,316 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 04:59:54 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 10054
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jul 05 21:59:43 JST 2023
+Time zone: 	Japan Standard Time (Asia/Tokyo)
+
+OS: Ubuntu
+OS Version: 5.15.0-76-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: 0
+Screen size: 2560x1440
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/opt/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/opt/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	binhkieudo
+User home directory: /home/binhkieudo
+User working directory: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2022.2
+RDI_DATADIR: /opt/Xilinx/Vivado/2022.2/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: /home/binhkieudo/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/binhkieudo/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/binhkieudo/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/binhkieudo/Workspace/XRPIX/JTAG/vivado/vivado.log
+Vivado journal file: 	/home/binhkieudo/Workspace/XRPIX/JTAG/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-10054-binhkieudo-asus
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /opt/Xilinx/Vivado/2022.2
+RDI_BASEROOT: /opt/Xilinx/Vivado
+RDI_BINROOT: /opt/Xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /opt/Xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: /opt/Xilinx
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /opt/Xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu/20:/opt/Xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu:/opt/Xilinx/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /opt/Xilinx/Vitis/2022.2/bin:/opt/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /opt/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /opt/Xilinx/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /opt/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2022.2
+XILINX_SDK: /opt/Xilinx/Vitis/2022.2
+XILINX_VITIS: /opt/Xilinx/Vitis/2022.2
+XILINX_VIVADO: /opt/Xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2022.2
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,989 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 108 MB (+110853kb) [00:00:08]
+// [Engine Memory]: 1,837 MB (+1774660kb) [00:00:08]
+// Opening Vivado Project: ./jtag/jtag.xpr. Version: Vivado v2022.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project ./jtag/jtag.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,970 MB. GUI used memory: 63 MB. Current time: 7/5/23, 9:59:44 PM JST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,994 MB (+67875kb) [00:00:14]
+// [GUI Memory]: 118 MB (+4618kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  2327 ms.
+// Tcl Message: open_project ./jtag/jtag.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag/jtag.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'. 
+// [Engine Memory]: 2,099 MB (+6101kb) [00:00:17]
+// Project name: jtag; location: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag; part: xc7a35ticsg324-1L
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 7360.996 ; gain = 283.031 ; free physical = 21963 ; free virtual = 28755 
+dismissDialog("Open Project"); // bq
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 127 MB (+3199kb) [00:00:20]
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tap_top (tap_top.v)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tap_top (tap_top.v)]", 1, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tap_top (tap_top.v)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tap_top (tap_top.v)]", 1, false, false, false, false, false, true); // D - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,152 MB. GUI used memory: 72 MB. Current time: 7/5/23, 10:00:59 PM JST
+// Elapsed time: 71 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tap_top (tap_top.v)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tap_top (tap_top.v)]", 1, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("tap_top.v", 261, 263); // ac
+selectCodeEditor("tap_top.v", 261, 263, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 153 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "jtag_tap.v"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag/jtag.srcs/sources_1/new/jtag_tap.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag/jtag.srcs/sources_1/new/jtag_tap.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton
+dismissDialog("Define Module"); // p
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,177 MB. GUI used memory: 72 MB. Current time: 7/5/23, 10:04:09 PM JST
+// Elapsed time: 659 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, jtag_tap (jtag_tap.v)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, jtag_tap (jtag_tap.v)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, jtag_tap (jtag_tap.v)]", 4, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tap_top.v", 1); // o
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tap_top.v", 1, true, false); // o - Popup Trigger
+selectMenuItem((HResource) null, "New Vertical Group"); // JMenuItem
+selectCodeEditor("jtag_tap.v", 644, 464); // ac
+selectCodeEditor("tap_top.v", 218, 441); // ac
+selectCodeEditor("tap_top.v", 285, 260); // ac
+selectCodeEditor("jtag_tap.v", 334, 462); // ac
+selectCodeEditor("jtag_tap.v", 375, 434); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,197 MB. GUI used memory: 73 MB. Current time: 7/5/23, 10:16:19 PM JST
+// Elapsed time: 337 seconds
+selectCodeEditor("tap_top.v", 786, 755); // ac
+typeControlKey((HResource) null, "tap_top.v", 'c'); // ac
+selectCodeEditor("jtag_tap.v", 108, 450); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 66, 450); // ac
+selectCodeEditor("jtag_tap.v", 66, 450, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("jtag_tap.v", 177, 456); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("jtag_tap.v", 748, 562); // ac
+selectCodeEditor("jtag_tap.v", 12, 470); // ac
+selectCodeEditor("jtag_tap.v", 3, 448); // ac
+selectCodeEditor("jtag_tap.v", 716, 567); // ac
+selectCodeEditor("jtag_tap.v", 144, 594); // ac
+selectCodeEditor("jtag_tap.v", 5, 446); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("jtag_tap.v", 240, 554); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("jtag_tap.v", 178, 592); // ac
+selectCodeEditor("tap_top.v", 848, 253); // ac
+selectCodeEditor("tap_top.v", 550, 234); // ac
+selectCodeEditor("tap_top.v", 819, 294); // ac
+selectCodeEditor("tap_top.v", 849, 247); // ac
+typeControlKey((HResource) null, "tap_top.v", 'c'); // ac
+selectCodeEditor("jtag_tap.v", 10, 609); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 438, 658); // ac
+selectCodeEditor("jtag_tap.v", 596, 652); // ac
+selectCodeEditor("jtag_tap.v", 788, 726); // ac
+selectCodeEditor("jtag_tap.v", 800, 704); // ac
+selectCodeEditor("jtag_tap.v", 513, 730); // ac
+selectCodeEditor("jtag_tap.v", 530, 712); // ac
+selectCodeEditor("tap_top.v", 470, 593); // ac
+typeControlKey((HResource) null, "tap_top.v", 'c'); // ac
+selectCodeEditor("jtag_tap.v", 182, 735); // ac
+selectCodeEditor("jtag_tap.v", 183, 714); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 44, 504); // ac
+selectCodeEditor("jtag_tap.v", 44, 504, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("jtag_tap.v", 89, 534); // ac
+selectCodeEditor("jtag_tap.v", 71, 500); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'c'); // ac
+selectCodeEditor("jtag_tap.v", 67, 520); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("jtag_tap.v", 85, 504); // ac
+selectCodeEditor("jtag_tap.v", 118, 509); // ac
+selectCodeEditor("jtag_tap.v", 88, 502); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'c'); // ac
+selectCodeEditor("jtag_tap.v", 70, 516); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 74, 539); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 72, 560); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 68, 578); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 73, 599); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 71, 611); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 67, 638); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 76, 654); // ac
+selectCodeEditor("jtag_tap.v", 59, 670); // ac
+selectCodeEditor("jtag_tap.v", 70, 652); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 74, 676); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 65, 693); // ac
+selectCodeEditor("jtag_tap.v", 74, 691); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 75, 711); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 75, 733); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 72, 751); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 70, 767); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 71, 786); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+selectCodeEditor("jtag_tap.v", 321, 514); // ac
+selectCodeEditor("jtag_tap.v", 321, 506); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'c'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,216 MB (+12181kb) [00:24:08]
+// Elapsed time: 15 seconds
+selectCodeEditor("jtag_tap.v", 597, 636); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("jtag_tap.v", 539, 512); // ac
+selectCodeEditor("jtag_tap.v", 36, 820); // ac
+selectCodeEditor("jtag_tap.v", 38, 802); // ac
+selectCodeEditor("jtag_tap.v", 544, 764); // ac
+selectCodeEditor("jtag_tap.v", 171, 803); // ac
+// Elapsed time: 27 seconds
+selectCodeEditor("jtag_tap.v", 116, 165); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,217 MB. GUI used memory: 74 MB. Current time: 7/5/23, 10:24:49 PM JST
+// Elapsed time: 27 seconds
+typeControlKey((HResource) null, "jtag_tap.v", 'c'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'c'); // ac
+typeControlKey((HResource) null, "jtag_tap.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("jtag_tap.v", 153, 170); // ac
+selectCodeEditor("jtag_tap.v", 150, 185); // ac
+selectCodeEditor("jtag_tap.v", 150, 185, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,234 MB. GUI used memory: 66 MB. Current time: 7/5/23, 10:54:49 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,234 MB. GUI used memory: 64 MB. Current time: 7/5/23, 11:24:49 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,234 MB. GUI used memory: 64 MB. Current time: 7/5/23, 11:54:49 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,234 MB. GUI used memory: 64 MB. Current time: 7/6/23, 12:24:49 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,234 MB. GUI used memory: 64 MB. Current time: 7/6/23, 12:54:49 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,234 MB. GUI used memory: 64 MB. Current time: 7/6/23, 1:24:49 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,234 MB. GUI used memory: 50 MB. Current time: 7/6/23, 1:54:49 AM JST

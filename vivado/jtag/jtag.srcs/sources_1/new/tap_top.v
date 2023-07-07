@@ -37,7 +37,6 @@
 `define MBIST           4'b1001
 `define BYPASS          4'b1111
  
-
 module tap_top(
                 // JTAG pads
                 tms_pad_i, 
