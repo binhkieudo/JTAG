@@ -2,32 +2,14 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Jul  7 10:41:34 2023
-# Process ID: 1256291
+# Start of session at: Sun Jul  9 15:02:46 2023
+# Process ID: 42160
 # Current directory: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2
 # Command line: vivado jtag2.xpr
 # Log file: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/vivado.log
 # Journal file: /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/vivado.jou
-# Running On: binhkieudo, OS: Linux, CPU Frequency: 3300.000 MHz, CPU Physical cores: 10, Host memory: 134739 MB
+# Running On: binhkieudo-asus, OS: Linux, CPU Frequency: 1400.000 MHz, CPU Physical cores: 16, Host memory: 33036 MB
 #-----------------------------------------------------------
 start_gui
 open_project jtag2.xpr
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.srcs/sources_1/new/neorv32_debug_dm.v] -no_script -reset -force -quiet
-remove_files  /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.srcs/sources_1/new/neorv32_debug_dm.v
-file delete -force /home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.srcs/sources_1/new/neorv32_debug_dm.v
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top debug_dm [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 20
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 20
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 20
-wait_on_run synth_1

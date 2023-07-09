@@ -35,12 +35,13 @@ module debug_dtm # (
     input         i_tdi,
     output        o_tdo,
     input         i_tms,
-    // Debug Module Interface (DMI)
+    // Debug Module Interface (DMI) -- Request
     output        o_dmi_req_valid,
     input         i_dmi_req_ready,
     output [5:0]  o_dmi_req_address,
     output [31:0] o_dmi_req_data,
     output [1:0]  o_dmi_req_op,
+    // Debug Module Interface (DMI) -- Response
     input         i_dmi_rsp_valid,
     output        o_dmi_rsp_ready,
     input  [31:0] i_dmi_rsp_data,
@@ -74,24 +75,24 @@ module debug_dtm # (
     /*===============================
     ========= TAP FSM ===============
     ================================*/
-    localparam STATE_test_logic_reset = 4'hF, // 4'b1111
-             STATE_run_test_idle    = 4'hC, // 4'b1100
+    localparam STATE_test_logic_reset = 4'hF,   // 4'b1111
+             STATE_run_test_idle    = 4'hC,     // 4'b1100
              // dr state
-             STATE_select_dr_scan   = 4'h7, // 4'b0111
-             STATE_capture_dr       = 4'h6, // 4'b0110
-             STATE_shift_dr         = 4'h2, // 4'b0010
-             STATE_exit1_dr         = 4'h1, // 4'b0001
-             STATE_pause_dr         = 4'h3, // 4'b0011
-             STATE_exit2_dr         = 4'h0, // 4'b0000
-             STATE_update_dr        = 4'h5, // 4'b0101
+             STATE_select_dr_scan   = 4'h7,     // 4'b0111
+             STATE_capture_dr       = 4'h6,     // 4'b0110
+             STATE_shift_dr         = 4'h2,     // 4'b0010
+             STATE_exit1_dr         = 4'h1,     // 4'b0001
+             STATE_pause_dr         = 4'h3,     // 4'b0011
+             STATE_exit2_dr         = 4'h0,     // 4'b0000
+             STATE_update_dr        = 4'h5,     // 4'b0101
              // ir state
-             STATE_select_ir_scan   = 4'h4, // 4'b0100
-             STATE_capture_ir       = 4'hE, // 4'b1110
-             STATE_shift_ir         = 4'hA, // 4'b1010
-             STATE_exit1_ir         = 4'h9, // 4'b1001
-             STATE_pause_ir         = 4'hB, // 4'b1011
-             STATE_exit2_ir         = 4'h8, // 4'b1000
-             STATE_update_ir        = 4'hD; // 4'b1101
+             STATE_select_ir_scan   = 4'h4,     // 4'b0100
+             STATE_capture_ir       = 4'hE,     // 4'b1110
+             STATE_shift_ir         = 4'hA,     // 4'b1010
+             STATE_exit1_ir         = 4'h9,     // 4'b1001
+             STATE_pause_ir         = 4'hB,     // 4'b1011
+             STATE_exit2_ir         = 4'h8,     // 4'b1000
+             STATE_update_ir        = 4'hD;     // 4'b1101
     
     // Tap fsm registers
     reg  [3:0] tap_ctrl_state, tap_ctrl_next_state;
@@ -131,9 +132,7 @@ module debug_dtm # (
             STATE_update_ir:        tap_ctrl_next_state = tap_sync_tms? STATE_select_dr_scan    : STATE_run_test_idle;
             default:                tap_ctrl_next_state = STATE_test_logic_reset;
         endcase
-    
-
-       
+          
     /*===============================
     ========== DMI FSM ==============
     ================================*/
@@ -243,11 +242,13 @@ module debug_dtm # (
                     tap_reg_bypass <= 1'b0;
             end
             else if (tap_ctrl_state == STATE_shift_dr) begin // access phase
-                if (tap_reg_ireg == 5'b00001) tap_reg_idcode <= {tap_sync_tdi, tap_reg_idcode[31:1]};
-                if (tap_reg_ireg == 5'b10000) tap_reg_dtmcs  <= {tap_sync_tdi, tap_reg_dtmcs[31:1]};
-                if (tap_reg_ireg == 5'b10001) tap_reg_dmi    <= {tap_sync_tdi, tap_reg_dmi[39:1]};
-                if (!(tap_reg_ireg == 5'b00001) && !(tap_reg_ireg == 5'b10000) && !(tap_reg_ireg == 5'b10001))
-                    tap_reg_bypass <= tap_sync_tdi;                
+                if (tap_sync_tck_rising == 1'b1) begin
+                    if (tap_reg_ireg == 5'b00001) tap_reg_idcode <= {tap_sync_tdi, tap_reg_idcode[31:1]};
+                    if (tap_reg_ireg == 5'b10000) tap_reg_dtmcs  <= {tap_sync_tdi, tap_reg_dtmcs[31:1]};
+                    if (tap_reg_ireg == 5'b10001) tap_reg_dmi    <= {tap_sync_tdi, tap_reg_dmi[39:1]};
+                    if (!(tap_reg_ireg == 5'b00001) && !(tap_reg_ireg == 5'b10000) && !(tap_reg_ireg == 5'b10001))
+                        tap_reg_bypass <= tap_sync_tdi;
+                end                
             end
             
             // Serial data output
@@ -273,7 +274,6 @@ module debug_dtm # (
     assign tap_reg_dtmcs_nxt[11:10] = tap_reg_dmi_nxt[1:0]; // dmistat
     assign tap_reg_dtmcs_nxt[9:4]   = dmi_address_width; // number of DMI address bits
     assign tap_reg_dtmcs_nxt[3:0]   = dmi_version; // dmi version
-    
     // DMI register read
     assign tap_reg_dmi_nxt[39:34] = dmi_addr;
     assign tap_reg_dmi_nxt[33:2]  = dmi_rdata;
@@ -336,15 +336,12 @@ module debug_dtm # (
     // JTAG interface
     assign o_tdo = r_tdo;
     
-    // DMI interface
-//        output [5:0]  o_dmi_req_address,
-//    output [31:0] o_dmi_req_data,
-//    output [1:0]  o_dmi_req_op,
-//    output        o_dmi_rsp_ready,
+    // DMI interface request
     assign o_dmi_req_valid   = (dmi_ctrl_state == DMI_STATE_read) || (dmi_ctrl_state == DMI_STATE_write);
     assign o_dmi_req_address = dmi_addr;
     assign o_dmi_req_data    = dmi_wdata;
     assign o_dmi_req_op      = tap_reg_dmi[1:0];
+    // DMI interface response
     assign o_dmi_rsp_ready   = (dmi_ctrl_state == DMI_STATE_read_busy) || (dmi_ctrl_state == DMI_STATE_write_busy);
         
 endmodule

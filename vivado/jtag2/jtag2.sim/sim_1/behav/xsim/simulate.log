@@ -1,0 +1,2 @@
+Time resolution is 1 ps
+$stop called at time : 117 ns : File "/home/binhkieudo/Workspace/XRPIX/JTAG/vivado/jtag2/jtag2.srcs/sim_1/new/tap_sync_tb.sv" Line 55
